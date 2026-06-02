@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/sse-demo/',
+  base: '/spring-boot-sse/',
   server: {
     port: 3000,
     proxy: {
