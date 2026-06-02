@@ -3,11 +3,12 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
+  "homepage": "https://Phoenix-uy.github.io/spring-boot-sse",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "vite build && gh-pages -d dist"
+    "deploy": "vite build && gh-pages -d dist -f"
   },
   "dependencies": {
     "react": "^18.2.0",
