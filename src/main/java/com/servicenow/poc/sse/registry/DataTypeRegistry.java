@@ -2,13 +2,11 @@ package com.servicenow.poc.sse.registry;
 
 import com.servicenow.poc.sse.model.DataModel;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Component;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 @Slf4j
-@Component
 public class DataTypeRegistry {
     
     private final Map<String, Class<? extends DataModel>> registry = new ConcurrentHashMap<>();
