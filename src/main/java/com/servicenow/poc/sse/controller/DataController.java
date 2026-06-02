@@ -27,4 +27,10 @@ public class DataController {
             "modelClass", dataService.getData().getClass().getSimpleName()
         ));
     }
+
+    @PostMapping
+    public ResponseEntity<DataModel> updateData(@RequestBody DataModel newData) {
+        dataService.updateData(newData);
+        return ResponseEntity.ok(newData);
+    }
 }

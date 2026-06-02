@@ -136,4 +136,17 @@ public class DataService {
     public String getCurrentDataType() {
         return registry.getActiveDataType();
     }
+    
+    public void updateData(DataModel newData) {
+        try {
+            Path path = Paths.get(dataFilePath);
+            objectMapper.writerWithDefaultPrettyPrinter().writeValue(path.toFile(), newData);
+            dataStore.set(newData);
+            notifyClients();
+            log.info("Data updated via API: {}", newData.getDataType());
+        } catch (IOException e) {
+            log.error("Error updating data file", e);
+            throw new RuntimeException("Failed to update data", e);
+        }
+    }
 }
