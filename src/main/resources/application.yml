@@ -1,0 +1,15 @@
+server:
+  port: ${PORT:8080}
+
+spring:
+  application:
+    name: sse-demo
+
+app:
+  data:
+    file: data.json
+    type: simple
+
+logging:
+  level:
+    com.servicenow.poc.sse: DEBUG

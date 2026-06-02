@@ -1,0 +1,5 @@
+{
+  "message": "Hello SSE with Simple Data",
+  "counter": 42,
+  "timestamp": 1717358400000
+}

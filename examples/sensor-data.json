@@ -1,0 +1,7 @@
+{
+  "sensorId": "SENSOR-001",
+  "temperature": 23.5,
+  "humidity": 65.2,
+  "status": "active",
+  "timestamp": 1717358400000
+}

@@ -1,0 +1,10 @@
+{
+  "message": "Hello SSE",
+  "counter": 0,
+  "timestamp": 1234567890,
+  "status": "active",
+  "metadata": {
+    "version": "1.0",
+    "author": "System"
+  }
+}

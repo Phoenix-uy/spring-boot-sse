@@ -1,0 +1,6 @@
+{
+  "userId": "user123",
+  "action": "login",
+  "tags": ["web", "mobile", "authenticated"],
+  "timestamp": 1717358400000
+}
