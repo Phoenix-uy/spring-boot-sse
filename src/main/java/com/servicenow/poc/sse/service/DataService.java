@@ -149,4 +149,16 @@ public class DataService {
             throw new RuntimeException("Failed to update data", e);
         }
     }
+    
+    public DataModel convertAndUpdate(java.util.Map<String, Object> rawData) {
+        try {
+            Class<? extends DataModel> modelClass = registry.getActiveModelClass();
+            DataModel newData = objectMapper.convertValue(rawData, modelClass);
+            updateData(newData);
+            return newData;
+        } catch (Exception e) {
+            log.error("Error converting and updating data", e);
+            throw new RuntimeException("Failed to convert data to " + registry.getActiveDataType(), e);
+        }
+    }
 }

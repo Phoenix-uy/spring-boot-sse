@@ -29,8 +29,8 @@ public class DataController {
     }
 
     @PostMapping
-    public ResponseEntity<DataModel> updateData(@RequestBody DataModel newData) {
-        dataService.updateData(newData);
+    public ResponseEntity<DataModel> updateData(@RequestBody Map<String, Object> rawData) {
+        DataModel newData = dataService.convertAndUpdate(rawData);
         return ResponseEntity.ok(newData);
     }
 }
